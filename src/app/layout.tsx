@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from 'sonner';
+import Navbar from '@/components/Navbar';
 
 const jakarta_sans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={cn('relative h-full antialiased', jakarta_sans.className)}
       >
         <main className='relative flex flex-col min-h-screen'>
+          <Navbar />
           <div className='flex-grow flex-1'>{children}</div>
         </main>
 
